@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 .flex_container {
@@ -11,7 +12,7 @@ body {
 .flex_container a {
     padding: 15px 20px;
 }
- 
+
 .navbar {
     flex-direction: column;
     justify-content: space-between;
@@ -21,9 +22,11 @@ body {
     position: fixed;
     background-color: rgba(52, 52, 52, 1);
 }
-.navmenu{
+
+.navmenu {
     display: none;
 }
+
 .navbarcontent {
     flex-direction: column;
 }
@@ -36,9 +39,11 @@ body {
 .navbar a:hover {
     background-color: #f04e25;
 }
-.navbar .icon{
+
+.navbar .icon {
     justify-content: center;
 }
+
 .navbar .icon a {
     padding: 8px;
     font-size: 20px;
@@ -52,57 +57,44 @@ body {
     align-items: center;
     margin-left: 150px;
     overflow-wrap: break-word;
+    background-color: rgba(52, 52, 52, 0.1);
 }
-footer{
+
+.box {
+    width: 100%;
+    background-color: #f04e25;
+    height: 500px;
+}
+
+footer {
     position: fixed;
     bottom: 0;
     left: 160px;
     color: black;
 }
-@media screen and (max-width: 600px) {
-    /* .navbar{
+
+@media screen and (max-width: 800px) {
+    .navbar {
         left: -112px;
-    } */
-    .navbar.icon{
+    }
+
+    .navbar.icon {
         flex-direction: column;
     }
-    
-    
-    /* .navbar {
-        flex-direction: row;
-        height: 49px;
-        width: 100vw;
-        align-content: center;
-    }
-    .navmenu {
-        display: flex;
-        height: 49px;
-    }
-    .navbarcontent a:not(:first-child){
-        display: none;
-    }
-    .flex_container.navbarcontent.responsive a{
-        display: flex;
-        float: none;
-        text-align: left;
-        background-color: rgba(51, 51, 51, 1);
-    }
-    .flex_container.navbarcontent.responsive a:hover{
-        background-color: #f04e25;
-    }
-    .icon{
-        display: none;
-    }
-     */
+
     .content {
-        margin: 50px 0 0 0;
+        margin: 0;
+        padding: 50px;
     }
-    footer{
+
+    .box {
+        width: 100%;
+        margin-left: 76px;
+        padding: 60px;
+    }
+
+    footer {
         color: black;
-        left: 5px;
+        left: 45px;
     }
-}
-@keyframes menu_down{
-    from {top: -100%}
-    to {top: 0}
 }
