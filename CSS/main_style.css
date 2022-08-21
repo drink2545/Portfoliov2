@@ -2,6 +2,8 @@ body {
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     overflow-x: hidden;
+    background-color: black;
+    color: white;
 }
 
 .flex_container {
@@ -23,12 +25,14 @@ body {
     background-color: rgba(52, 52, 52, 1);
 }
 
-.navmenu {
-    display: none;
-}
-
 .navbarcontent {
     flex-direction: column;
+}
+
+.navcon {
+    animation-name: navopen;
+    animation-duration: 0.7s;
+    justify-content: space-between;
 }
 
 .navbar a {
@@ -52,17 +56,14 @@ body {
 
 .content {
     width: 100vw;
-    float: right;
     flex-direction: column;
     align-items: center;
     margin-left: 150px;
     overflow-wrap: break-word;
-    background-color: rgba(52, 52, 52, 0.1);
 }
 
 .box {
-    width: 100%;
-    background-color: #f04e25;
+    width: 60%;
     height: 500px;
 }
 
@@ -70,31 +71,48 @@ footer {
     position: fixed;
     bottom: 0;
     left: 160px;
-    color: black;
 }
 
 @media screen and (max-width: 800px) {
     .navbar {
-        left: -112px;
+        left: -95px;
+        animation-name: navclose;
+        animation-duration: 0.7s;
     }
 
-    .navbar.icon {
-        flex-direction: column;
+    .navbar.icon a {
+        display: none;
     }
 
     .content {
-        margin: 0;
-        padding: 50px;
+        margin: 0 95px 0 115px;
     }
 
     .box {
         width: 100%;
-        margin-left: 76px;
-        padding: 60px;
     }
 
     footer {
-        color: black;
         left: 45px;
+    }
+}
+
+@keyframes navclose {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -95px;
+    }
+}
+
+@keyframes navopen {
+    from {
+        left: -95px;
+    }
+
+    to {
+        left: 0;
     }
 }
