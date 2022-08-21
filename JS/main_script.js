@@ -1,8 +1,8 @@
 function navbar() {
-    var x = document.getElementById("navbar");
-    if (x.className === "navbar") {
-      x.className += " responsive";
+    var x = document.getElementById("navbarcontent");
+    if (x.className === "flex_container navbarcontent") {
+        x.classList.add("responsive")
     } else {
-      x.className = "navbar";
+        x.classList.remove("responsive")
     }
-  }
+}
