@@ -73,7 +73,7 @@ body {
 }
 .box.b2{
     background-image: linear-gradient(to right, rgba(51,51,51,1),  rgba(51,51,51,0.1),  rgba(51,51,51,1)),
-    url(/material/sun1920.png);
+    url(../material/sun1920.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
