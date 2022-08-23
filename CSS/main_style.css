@@ -30,8 +30,6 @@ body {
 }
 
 .navcon {
-    animation-name: navopen;
-    animation-duration: 0.7s;
     justify-content: space-between;
 }
 
@@ -63,9 +61,24 @@ body {
 }
 
 .box {
-    width: 60%;
-    height: fit-content;
-    
+    width: 100%;
+    height: 100vh;
+}
+.box.b1{
+    background-image: url(../material/1920iceburn.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: right;
+}
+.box h1{
+    font-size: 3em;
+}
+.box p{
+    font-size: 1.5em;
+}
+.box h1,p{
+    padding: 0 50px;
 }
 
 footer {
@@ -73,7 +86,6 @@ footer {
     bottom: 0;
     left: 160px;
 }
-
 @media screen and (max-width: 800px) {
     .navbar {
         left: -95px;
@@ -84,20 +96,19 @@ footer {
     .navbar.icon a {
         display: none;
     }
-
-    .content {
-        margin: 0 95px 0 115px;
+    .content{
+        margin-left: 55px;
     }
-
     .box {
         width: 100%;
     }
-
+    .box h1,p{
+        padding: 20px;
+    }
     footer {
-        left: 45px;
+        left: 70px;
     }
 }
-
 @keyframes navclose {
     from {
         left: 0;
@@ -105,15 +116,5 @@ footer {
 
     to {
         left: -95px;
-    }
-}
-
-@keyframes navopen {
-    from {
-        left: -95px;
-    }
-
-    to {
-        left: 0;
     }
 }
