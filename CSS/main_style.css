@@ -64,7 +64,8 @@ body {
 
 .box {
     width: 60%;
-    height: 500px;
+    height: fit-content;
+    
 }
 
 footer {
