@@ -42,11 +42,11 @@ body {
     background-color: #f04e25;
 }
 
-.navbar .icon {
+.icon {
     justify-content: center;
 }
 
-.navbar .icon a {
+.icon a {
     padding: 8px;
     font-size: 20px;
     width: 25%;
@@ -65,26 +65,104 @@ body {
     height: 100vh;
 }
 .box.b1{
-    background-image: url(../material/1920iceburn.png);
+    background-image:url(../material/1920iceburn.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: right;
 }
+.box.b2{
+    background-image: linear-gradient(to right, rgba(51,51,51,1),  rgba(51,51,51,0.1),  rgba(51,51,51,1)),
+    url(/material/sun1920.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box.b3{
+    height: fit-content;
+}
+.box.b4{
+    height: 500px;
+}
 .box h1{
     font-size: 3em;
 }
-.box p{
+.box p,li{
     font-size: 1.5em;
 }
-.box h1,p{
+.box h1,h2,p,li{
     padding: 0 50px;
 }
-
+.skill{
+    justify-content: space-between;
+    flex-direction: row;
+}
+.work_container{
+    background-color: rgba(51, 51, 51, 1);
+    border-radius: 15px;
+    justify-content: space-between;
+    margin: 0 10%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.work{
+    flex: 0 0 auto;
+    flex-direction: column;
+    padding: 0 20px;
+}
+.work p{
+    padding: 0;
+}
+.infocard{
+    height: 400px;
+    width: 300px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.infocard a{
+    text-decoration: none;
+    color: white;
+}
+.infocard img{
+    height: 200px;
+    width: 200px;
+}
+.cardfunction{
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    width: 300px;
+}
+.cardfunction img{
+    height: 300px;
+    width: 500px;
+}
+.box.b5{
+    height: fit-content;
+}
+.contact_container{
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.5);
+}
+.contact_container a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+.contact i{
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+}
 footer {
-    position: fixed;
     bottom: 0;
+    width: 100%;
     left: 160px;
+    text-align: center;
+    background-color: rgba(51, 51, 51, 0.5);
 }
 @media screen and (max-width: 800px) {
     .navbar {
@@ -96,17 +174,38 @@ footer {
     .navbar.icon a {
         display: none;
     }
+    .icon{
+        display: none;
+    }
     .content{
         margin-left: 55px;
     }
-    .box {
+    .box .b1,.b2,.b3,.b4{
+        flex-direction: column;
+        min-height: 100vh;
+        height: fit-content;
         width: 100%;
     }
     .box h1,p{
         padding: 20px;
     }
-    footer {
-        left: 70px;
+    .skill{
+        flex-direction: column;
+        align-items: left;
+    }
+    .work_container{
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+    }
+    .cardfunction{
+        flex-direction: column;
+        overflow: hidden;
+        height: fit-content;
+    }
+    .cardfunction img{
+        width: 300px;
+        object-fit: contain;
     }
 }
 @keyframes navclose {
