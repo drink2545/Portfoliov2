@@ -20,7 +20,7 @@ body {
     justify-content: space-between;
     float: left;
     width: 150px;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     background-color: rgba(52, 52, 52, 1);
 }
