@@ -164,7 +164,7 @@ footer {
     text-align: center;
     background-color: rgba(51, 51, 51, 0.5);
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .navbar {
         left: -95px;
         animation-name: navclose;
